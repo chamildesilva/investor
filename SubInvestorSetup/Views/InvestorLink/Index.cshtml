@@ -5,126 +5,146 @@
 }
 
 @*<h4>Sub Investor Setup</h4>*@
+   @* <div class="table-responsive-lg  table-hover">*@
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.InvestorNo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.InvestorSubFrom)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.InvestorSubTo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ModelAfterInvestorNo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ModelAfterInvestorSub)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreatedDate)
+                    </th>
+                    @*<th>
+                        @Html.DisplayNameFor(model => model.CreatedBy)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ApprovedDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ApprovedBy)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeployedDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeployedBy)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeletedDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeletedBy)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeletedReason)
+                    </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th>
+                        <a asp-action="Create" class="btn btn-success"><span class="far fa-plus-squre"></span>Create New</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvestorNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvestorSubFrom)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvestorSubTo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ModelAfterInvestorNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ModelAfterInvestorSub)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedDate, "{0:dd/MM/yyyy}")
+                        </td>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.CreatedBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ApprovedDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ApprovedBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DeployedDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DeployedBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DeletedDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DeletedBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DeletedReason)
+                        </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td style="width: 90px;">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table table-hover table-responsive-sm">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InvestorNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InvestorSubFrom)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InvestorSubTo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ModelAfterInvestorNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ModelAfterInvestorSub)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedDate)
-            </th>
-            @*<th>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ApprovedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ApprovedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeployedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeployedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeletedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeletedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeletedReason)
-        </th>*@
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th>
-            <a asp-action="Create" class="btn btn-outline-success"><span class="far fa-plus-squre"></span>Create New</a>
-        </th>         
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvestorNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvestorSubFrom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvestorSubTo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModelAfterInvestorNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModelAfterInvestorSub)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate,"{0:dd/MM/yyyy}")
-            </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.CreatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApprovedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApprovedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeployedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeployedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeletedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeletedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeletedReason)
-            </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-        <td>
-            @*<a asp-action="Edit" asp-route-id="@item.InvestorSetupId">Edit</a> |*@
-            <a asp-action="Details" asp-route-id="@item.InvestorSetupId">Details</a> |
-            <a asp-action="Delete" asp-route-id="@item.InvestorSetupId">Delete</a>
-            <a asp-action="Delete" asp-route-id="@item.InvestorSetupId"><span class="glyphicon glyphicon-trash"></span></a>
-            
-            <span class="glyphicon glyphicon-magnet"></span>
-        </td>
-        </tr>
-}
-    </tbody>
-</table>
+                            @*<a asp-action="Edit" asp-route-id="@item.InvestorSetupId">Edit</a> |*@
+                            <a asp-action="Details" asp-route-id="@item.InvestorSetupId" >Details</a>
+
+                            @{ if (item.Status != EnumStatus.Deleted)
+                                {
+                                    <a asp-action="Delete" asp-route-id="@item.InvestorSetupId">Delete</a>
+
+                                }
+                            }
+
+                            @{ if (item.Status == EnumStatus.New)
+                                {
+                                    <a asp-action="Approve" asp-route-id="@item.InvestorSetupId">Approve</a>
+                                }
+                            }
+
+                            @{ if (item.Status == EnumStatus.Approved)
+                                {
+                                    <a asp-action="Deploy" asp-route-id="@item.InvestorSetupId">Deploy</a>
+                                }
+                            }
+
+                            @*<a asp-action="Delete" asp-route-id="@item.InvestorSetupId"></a>*@
+                            @*<a asp-action="Delete" asp-route-id="@item.InvestorSetupId"><span class="glyphicon glyphicon-envelope"></span></a>*@
+
+                            <span class="glyphicon glyphicon-magnet"></span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+   @* </div>*@

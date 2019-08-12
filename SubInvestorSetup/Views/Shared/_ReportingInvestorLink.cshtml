@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SubInvestorSetup.Models.ReportingInvestorLink>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>InvestorReportingLink</h4>
+
+<table class="table table-hover table-responsive-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RI_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.INVESTOR_NBR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.INVESTOR_SUB)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RI_Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.INVESTOR_NBR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.INVESTOR_SUB)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

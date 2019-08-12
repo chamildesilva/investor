@@ -4,8 +4,10 @@
     ViewData["Title"] = "Delete";
 }
 
-<h4>Delete</h4>
+<h4>@ViewData["ApproveError"]</h4>
 
+<h3>Approve</h3>
+<br/>
 <div>
     <table class="table table-hover table-responsive-sm">
         <thead class="badge-light">
@@ -174,9 +176,9 @@
     }
 }
 <div>
-    <form asp-action="Delete">
+    <form asp-action="Approve">
         <input type="hidden" asp-for="@Model.InvestorLink.InvestorSetupId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="Approve" class="btn btn-primary" /> |
         <a asp-action="Index">Back to List</a>
     </form>
 </div>

@@ -1,9 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\InvestorLink\Approve - Copy.cshtml" />
+    <Content Remove="Views\InvestorLink\Delete - Copy.cshtml" />
+    <Content Remove="Views\InvestorLink\Deploy - Copy.cshtml" />
+    <Content Remove="Views\InvestorLink\Details - Copy.cshtml" />
+  </ItemGroup>
 
 
   <ItemGroup>

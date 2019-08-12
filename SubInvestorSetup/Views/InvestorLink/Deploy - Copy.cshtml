@@ -1,0 +1,157 @@
+﻿@model SubInvestorSetup.Models.ReportingInvestorViewModel
+
+@{
+    ViewData["Title"] = "Deploy";
+}
+<h4>@ViewData["DeployError"]</h4>
+
+<h1>Deploy</h1>
+
+<h3>Are you sure you want to deploy this?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.InvestorNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.InvestorNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.InvestorSubFrom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.InvestorSubFrom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.InvestorSubTo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.InvestorSubTo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.ModelAfterInvestorNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.ModelAfterInvestorNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.ModelAfterInvestorSub)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.ModelAfterInvestorSub)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.CreatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.CreatedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.CreatedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.CreatedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.ApprovedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.ApprovedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.ApprovedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.ApprovedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.DeployedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.DeployedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.DeployedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.DeployedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.DeletedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.DeletedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.DeletedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.DeletedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.DeletedReason)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.DeletedReason)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestorLink.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestorLink.Status)
+        </dd>
+    </dl>
+
+
+</div>
+<div>
+    <table class="table table-hover table-responsive-sm">
+        <thead>
+            <tr>
+                <th>
+                    RI Code
+                </th>
+                <th>
+                    INVESTOR NBR
+                </th>
+                <th>
+                    INVESTOR SUB
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.ReportingInvestorLink != null)
+            {
+                @foreach (var item in Model.ReportingInvestorLink)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RI_Code)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.INVESTOR_NBR)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.INVESTOR_SUB)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<div>
+<form asp-action="Deploy">
+    <input type="hidden" asp-for="@Model.InvestorLink.InvestorSetupId" />
+    <input type="submit" value="Deploy" class="btn btn-danger" /> |
+    <a asp-action="Index">Back to List</a>
+</form>
+</div>
