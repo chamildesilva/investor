@@ -74,6 +74,7 @@ namespace SubInvestorSetup.Controllers
         
         [ValidateAntiForgeryToken]
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("InvestorSetupId,Description,InvestorNo,InvestorSubFrom,InvestorSubTo,ModelAfterInvestorNo,ModelAfterInvestorSub,CreatedDate,CreatedBy,ApprovedDate,ApprovedBy,DeployedDate,DeployedBy,DeletedDate,DeletedBy,DeletedReason,Status = 1")] InvestorLink investorLink)
         {
 
